@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-23T13:11:35.552Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" etag="q9QvRfyD1SC1wY9arM2y" version="24.6.4" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2024-07-23T13:11:52.962Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0" etag="fDXMTJEI1wK8XGo6KDO8" version="24.6.4" type="github" pages="6">
   <diagram name="Halaman-1" id="3jl_8TBkqYQKlEN5Zisd">
     <mxGraphModel dx="1050" dy="522" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1279,7 +1279,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="eTCnviKagPInG1srqBel" name="Halaman-6">
+  <diagram id="eTCnviKagPInG1srqBel" name="erd transaksi simpanan">
     <mxGraphModel dx="1387" dy="745" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
