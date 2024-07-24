@@ -18,10 +18,14 @@ pdfMake.fonts = {
   },
 };
 
+const image = '/signature/signature.png'
+
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 
 import moment from 'moment'
+import 'moment/locale/id';
+moment.locale('id');
 
 interface UserData {
   id: number;
@@ -68,9 +72,26 @@ function formatDate(dateString: string | number | Date) {
 // const [allExpanded, setAllExpanded] = useState(false);
 const PageComponent = () => {
   const [data, setData] = useState<UserData[]>([]); // Menetapkan tipe UserData[]
+  const [base64Image, setBase64Image] = useState('');
 
   useEffect(() => {
     fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fileToBase64 = (file: any) => {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setBase64Image(reader.result);
+      };
+      reader.readAsDataURL(file);
+    };
+
+    // Load the image file from local directory
+    fetch(image)
+      .then(response => response.blob())
+      .then(file => fileToBase64(file))
+      .catch(error => console.error('Error fetching image:', error));
   }, []);
 
   const fetchData = async () => {
@@ -94,6 +115,7 @@ const PageComponent = () => {
           {
             text: 'Laporan Simpanan',
             style: 'header',
+            margin: [0, 10]
           },
           {
             table: {
@@ -105,6 +127,13 @@ const PageComponent = () => {
               ],
             },
           },
+          { text: 'Depok, ' + moment().format('dddd D MMMM YYYY'), margin: [0, 20, 0, 10], alignment: 'right' },
+          {
+            image: base64Image,
+            fit: [150, 200],
+            alignment: 'right'
+          },
+          { text: 'Admin MPA', margin: [0, 10, 0, 0], alignment: 'right' },
         ],
         styles: {
           header: {
